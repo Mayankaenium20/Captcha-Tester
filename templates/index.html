@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Captcha Solver</h1>
+        <form method="post" enctype="multipart/form-data" action="/">
+            <input type="file" name="captcha_image" id="captcha-upload" accept=".jpg, .png, .jpeg">
+            <label for="captcha-upload" class="upload-label">Choose a Captcha Image</label>
+            <input type="submit" value="Upload and Solve Captcha" class="btn">
+        </form>
+        {% if captcha_text %}
+            <div class="result">
+                <p class="captcha-text">Captcha Text: {{ captcha_text }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
