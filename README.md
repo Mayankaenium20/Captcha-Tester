@@ -24,6 +24,7 @@ This is a Streamlit web application that allows users to upload a CAPTCHA image 
     + OpenCV (cv2)
     + Numpy
     + Keras (for the CAPTCHA recognition model)
+    + Secrets
     + Flask(optional)
 
 ## Usage
